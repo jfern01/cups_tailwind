@@ -68,30 +68,30 @@
 
       {ADVANCEDSETTINGS?
       <input type="hidden" name="OP" value="config-server">
-      <input type="hidden" name="ADVANCEDSETTINGS" value="YES">
+      <input type="hidden" name="ADVANCEDSETTINGS" value="CHECKED">
       <p class="text-xs"><a href="/admin/">Hide advanced ▼</a></p>
-      <label class="flex items-center gap-2"><input type="checkbox" name="SHARE_PRINTERS" {?share_printers}> Share printers connected to this system</label>
+      <label class="flex items-center gap-2"><input type="checkbox" name="SHARE_PRINTERS" value="CHECKED" {?share_printers}> Share printers connected to this system</label>
       <label class="flex items-center gap-2 ml-6 text-sm">Max clients&#58; <input type="text" name="MAX_CLIENTS" value="{?max_clients}" size="6"></label>
-      <label class="flex items-center gap-2 ml-6"><input type="checkbox" name="REMOTE_ANY" {?remote_any}> Allow printing from the Internet</label>
-      <label class="flex items-center gap-2 ml-6"><input type="checkbox" name="BROWSE_WEB_IF" {?browse_web_if}> Advertise web interface</label>
-      <label class="flex items-center gap-2"><input type="checkbox" name="REMOTE_ADMIN" {?remote_admin}> Allow remote administration</label>
-      {have_gssapi?<label class="flex items-center gap-2"><input type="checkbox" name="KERBEROS" {?kerberos}> Use Kerberos authentication (<a href="/help/kerberos.html?TOPIC=Getting+Started">FAQ</a>)</label>:}
-      <label class="flex items-center gap-2"><input type="checkbox" name="USER_CANCEL_ANY" {?user_cancel_any}> Allow users to cancel any job</label>
-      <label class="flex items-center gap-2"><input type="checkbox" name="PRESERVE_JOBS" {?preserve_jobs}> Preserve job history</label>
+      <label class="flex items-center gap-2 ml-6"><input type="checkbox" name="REMOTE_ANY" value="CHECKED" {?remote_any}> Allow printing from the Internet</label>
+      <label class="flex items-center gap-2 ml-6"><input type="checkbox" name="BROWSE_WEB_IF" value="CHECKED" {?browse_web_if}> Advertise web interface</label>
+      <label class="flex items-center gap-2"><input type="checkbox" name="REMOTE_ADMIN" value="CHECKED" {?remote_admin}> Allow remote administration</label>
+      {have_gssapi?<label class="flex items-center gap-2"><input type="checkbox" name="KERBEROS" value="CHECKED" {?kerberos}> Use Kerberos authentication (<a href="/help/kerberos.html?TOPIC=Getting+Started">FAQ</a>)</label>:}
+      <label class="flex items-center gap-2"><input type="checkbox" name="USER_CANCEL_ANY" value="CHECKED" {?user_cancel_any}> Allow users to cancel any job</label>
+      <label class="flex items-center gap-2"><input type="checkbox" name="PRESERVE_JOBS" value="CHECKED" {?preserve_jobs}> Preserve job history</label>
       <label class="flex items-center gap-2 ml-6 text-sm">Max jobs (0 = unlimited)&#58; <input type="text" name="MAX_JOBS" value="{?max_jobs}" size="6"></label>
       <label class="flex items-center gap-2 ml-6 text-sm">Retain metadata&#58; <input type="text" name="PRESERVE_JOB_HISTORY" value="{?preserve_job_history}" size="6"></label>
       <label class="flex items-center gap-2 ml-6 text-sm">Retain documents&#58; <input type="text" name="PRESERVE_JOB_FILES" value="{?preserve_job_files}" size="6"></label>
-      <label class="flex items-center gap-2"><input type="checkbox" name="DEBUG_LOGGING" {?debug_logging}> Save debug info</label>
+      <label class="flex items-center gap-2"><input type="checkbox" name="DEBUG_LOGGING" value="CHECKED" {?debug_logging}> Save debug info</label>
       <label class="flex items-center gap-2 ml-6 text-sm">Max log size&#58; <input type="text" name="MAX_LOG_SIZE" value="{?max_log_size}" size="6"></label>
       :
       <p class="text-xs"><a href="/admin/?ADVANCEDSETTINGS=YES">Show advanced ▶</a></p>
       <input type="hidden" name="OP" value="config-server">
-      <label class="flex items-center gap-2"><input type="checkbox" name="SHARE_PRINTERS" {?share_printers}> Share printers connected to this system</label>
-      <label class="flex items-center gap-2 ml-6"><input type="checkbox" name="REMOTE_ANY" {?remote_any}> Allow printing from the Internet</label>
-      <label class="flex items-center gap-2"><input type="checkbox" name="REMOTE_ADMIN" {?remote_admin}> Allow remote administration</label>
-      {have_gssapi?<label class="flex items-center gap-2"><input type="checkbox" name="KERBEROS" {?kerberos}> Use Kerberos authentication (<a href="/help/kerberos.html?TOPIC=Getting+Started">FAQ</a>)</label>:}
-      <label class="flex items-center gap-2"><input type="checkbox" name="USER_CANCEL_ANY" {?user_cancel_any}> Allow users to cancel any job</label>
-      <label class="flex items-center gap-2"><input type="checkbox" name="DEBUG_LOGGING" {?debug_logging}> Save debug info</label>
+      <label class="flex items-center gap-2"><input type="checkbox" name="SHARE_PRINTERS" value="CHECKED" {?share_printers}> Share printers connected to this system</label>
+      <label class="flex items-center gap-2 ml-6"><input type="checkbox" name="REMOTE_ANY" value="CHECKED" {?remote_any}> Allow printing from the Internet</label>
+      <label class="flex items-center gap-2"><input type="checkbox" name="REMOTE_ADMIN" value="CHECKED" {?remote_admin}> Allow remote administration</label>
+      {have_gssapi?<label class="flex items-center gap-2"><input type="checkbox" name="KERBEROS" value="CHECKED" {?kerberos}> Use Kerberos authentication (<a href="/help/kerberos.html?TOPIC=Getting+Started">FAQ</a>)</label>:}
+      <label class="flex items-center gap-2"><input type="checkbox" name="USER_CANCEL_ANY" value="CHECKED" {?user_cancel_any}> Allow users to cancel any job</label>
+      <label class="flex items-center gap-2"><input type="checkbox" name="DEBUG_LOGGING" value="CHECKED" {?debug_logging}> Save debug info</label>
       }
       <div class="pt-2">
         <input type="submit" class="btn btn-primary" name="CHANGESETTINGS" value="Change settings">
